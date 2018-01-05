@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>cn.arice.com.filter.EncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>bm</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  	
+  </filter-mapping>
+   <filter>
+  	<filter-name>IsLoginFilter</filter-name>
+  	<filter-class>cn.arice.com.filter.IsLoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>IsLoginFilter</filter-name>
+  	<url-pattern>/userpage/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.frontpage.UserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Image</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.Image</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateUserInfoServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.UpdateUserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangePwdServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ChangePwdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginHistoryServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.LoginHistoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LeaveMsgAddServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.frontpage.LeaveMsgAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LeaveMsgDeleteServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.LeaveMsgDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddArticelServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.AddArticelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LeaveMsgSetIsLookServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.LeaveMsgSetIsLookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LeaveMsgSelectServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.LeaveMsgSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticelSelectServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ArticelSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdataArticelServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.UpdataArticelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticelViewServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.frontpage.ArticelViewServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticelDeleteServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ArticelDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticelListByTypeServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.frontpage.ArticelListByTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FileUploadAndDownServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.FileUploadAndDownServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AlbumAddServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.AlbumAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AlbumDelServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.AlbumDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ImgSelectServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ImgSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ImgUpdateServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ImgUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ImgDelServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ImgDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AlbumUpdateServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.AlbumUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticelCommentDelServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ArticelCommentDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticelCommentSetIsLookServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.userpage.ArticelCommentSetIsLookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAllArticleServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.blog_wap.GetAllArticleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticleViewServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.blog_wap.ArticleViewServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <url-pattern>/frontpage/userInfo.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Image</servlet-name>
+    <url-pattern>/userpage/Image</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/userpage/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/userpage/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserInfoServlet</servlet-name>
+    <url-pattern>/userpage/UpdateUserInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePwdServlet</servlet-name>
+    <url-pattern>/userpage/ChangePwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginHistoryServlet</servlet-name>
+    <url-pattern>/userpage/LoginHistory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeaveMsgAddServlet</servlet-name>
+    <url-pattern>/frontpage/LeaveMsgAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeaveMsgDeleteServlet</servlet-name>
+    <url-pattern>/userpage/LeaveMsgDelete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddArticelServlet</servlet-name>
+    <url-pattern>/userpage/AddArticel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeaveMsgSetIsLookServlet</servlet-name>
+    <url-pattern>/userpage/LeaveMsgSetIsLook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeaveMsgSelectServlet</servlet-name>
+    <url-pattern>/userpage/LeaveMsgSelect</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArticelSelectServlet</servlet-name>
+    <url-pattern>/userpage/ArticelSelect</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdataArticelServlet</servlet-name>
+    <url-pattern>/userpage/UpdataArticel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArticelViewServlet</servlet-name>
+    <url-pattern>/frontpage/ArticelView.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArticelDeleteServlet</servlet-name>
+    <url-pattern>/userpage/ArticelDelete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArticelListByTypeServlet</servlet-name>
+    <url-pattern>/frontpage/articellistbytype.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileUploadAndDownServlet</servlet-name>
+    <url-pattern>/userpage/FileUploadAndDown</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AlbumAddServlet</servlet-name>
+    <url-pattern>/userpage/AlbumAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AlbumDelServlet</servlet-name>
+    <url-pattern>/userpage/AlbumDel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImgSelectServlet</servlet-name>
+    <url-pattern>/userpage/ImgSelect</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImgUpdateServlet</servlet-name>
+    <url-pattern>/userpage/ImgUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImgDelServlet</servlet-name>
+    <url-pattern>/userpage/ImgDel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AlbumUpdateServlet</servlet-name>
+    <url-pattern>/userpage/AlbumUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArticelCommentDelServlet</servlet-name>
+    <url-pattern>/userpage/ArticelCommentDel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArticelCommentSetIsLookServlet</servlet-name>
+    <url-pattern>/userpage/ArticelCommentSetIsLook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAllArticleServlet</servlet-name>
+    <url-pattern>/blog_wap/GetAllArticleServlet</url-pattern>
+  </servlet-mapping>	
+  <servlet-mapping>
+    <servlet-name>ArticleViewServlet</servlet-name>
+    <url-pattern>/blog_wap/ArticleViewServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/frontpage/errorpage/404.jsp</location>
+  </error-page>
+</web-app>
